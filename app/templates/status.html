@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+{% if user.is_authenticated %} <!-- Começa 1 / Tem que fechar -->
+
+<p>Servidor: {{ id_servidor }}</p>
+<p>Status atual: {{ status_sistema }}</p>
+
+{% else %}
+
+<p>Por favor, faça login.</p>
+
+{% endif %} <!-- Fecha 1 / NÃO ESQUECER DE FECHAR A ESTRUTURA LÓGICA -->
+
+{% endblock %}

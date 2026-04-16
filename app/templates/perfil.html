@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+{% if user.is_authenticated %} <!-- Começa 1 / Tem que fechar -->
+
+<p>Olá, {{ nome_funcionario }}!</p>
+<p>Cargo: {{ cargo }}</p>
+<p>Setor: {{ setor }}</p>
+
+{% else %}
+
+<p>Por favor, faça login.</p>
+
+{% endif %} <!-- Fecha 1 / NÃO ESQUECER DE FECHAR A ESTRUTURA LÓGICA -->
+
+{% endblock %}

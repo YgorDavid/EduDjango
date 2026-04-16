@@ -1,0 +1,173 @@
+/* =========================================
+   VARIÁVEIS E CONFIGURAÇÕES
+========================================= */
+:root {
+    --grafite: #121214;
+    --grafite-light: #202024;
+    --roxo-profundo: #8257E5;
+    --roxo-glow: rgba(130, 87, 229, 0.3);
+    --verde-neon: #04D361;
+    --verde-hover: #03a64c;
+    --texto-claro: #e1e1e6;
+    --texto-dim: #a8a8b3;
+
+    --transition: 0.3s ease-in-out;
+}
+
+/* Reset básico para evitar problemas de layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* =========================================
+   ESTILOS GERAIS
+========================================= */
+body {
+    background-color: var(--grafite);
+    color: var(--texto-claro);
+    font-family: 'Fira Code', monospace;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   NAVEGAÇÃO (MENU)
+========================================= */
+.custom-navbar {
+    background-color: var(--grafite);
+    border-bottom: 2px solid var(--roxo-profundo);
+    padding: 1rem 0;
+}
+
+.nav-link {
+    color: var(--texto-dim) !important;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.navbar-brand {
+    color: #ffffff !important; /* Força o branco sobre o padrão do Bootstrap */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Garante que não mude de cor no hover, se desejar */
+.navbar-brand:hover {
+    color: var(--verde-neon) !important;
+    text-shadow: 0 0 10px rgba(4, 211, 97, 0.5);
+    --transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--verde-neon) !important;
+    text-shadow: 0 0 10px rgba(4, 211, 97, 0.5);
+    --transition: 0.3s ease-in-out;
+}
+
+/* =========================================
+   COMPONENTES & UTILITÁRIOS
+========================================= */
+.neon-text {
+    color: var(--verde-neon) !important;
+    font-weight: bold;
+    text-shadow: 0 0 8px var(--verde-neon);
+}
+
+.purple-text {
+    color: var(--roxo-profundo) !important;
+}
+
+/* Botão Primary Refatorado */
+.btn-primary {
+    background-color: var(--verde-neon);
+    color: var(--grafite);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: var(--transition);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--verde-hover);
+    color: var(--grafite);
+    box-shadow: 0 0 20px rgba(4, 211, 97, 0.4);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   AJUSTE PARA O ESTILO DA IMAGEM
+========================================= */
+
+/* Estilo base do campo (Usuário e Senha) */
+.form-control {
+    background-color: var(--grafite-light);
+    border: 1px solid var(--roxo-profundo); /* Borda sutil quando parado */
+    color: var(--texto-claro);
+    padding: 0.8rem;
+    border-radius: 8px; /* Bordas um pouco mais arredondadas */
+    transition: var(--transition);
+}
+
+/* Quando você clica no campo para digitar */
+.form-control:focus {
+    background-color: var(--grafite-light);
+    color: var(--texto-claro);
+    border-color: var(--verde-neon); /* A borda fica verde */
+    box-shadow: 0 0 8px rgba(4, 211, 97, 0.3); /* Glow suave verde */
+    outline: none;
+}
+
+/* O botão "ENTRAR NO EDUDJANGO" */
+.btn-login {
+    width: 100%; /* Para ocupar a largura toda como na imagem */
+    background-color: var(--verde-neon);
+    color: #121214;
+    border: none;
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-login:hover {
+    background-color: var(--verde-hover);
+    box-shadow: 0 0 15px rgba(4, 211, 97, 0.4);
+}
+
+.form-control::placeholder {
+    color: var(--verde-neon); /* Substitua pela cor desejada, ex: var(--texto-dim) */
+    opacity: 0.7;             /* Ajuste a opacidade se quiser um efeito mais suave */
+}
+
+.form-control:-ms-input-placeholder { color: var(--verde-neon); }
+.form-control::-ms-input-placeholder { color: var(--verde-neon); }
+
+/* =========================================
+   ELEMENTOS DE ESTRUTURA
+========================================= */
+ul {
+    list-style: none;
+}
+
+hr {
+    border-top: 1px solid var(--roxo-profundo);
+    opacity: 0.3;
+    margin: 2rem 0;
+}
+
+footer {
+    padding: 2rem 0;
+    color: var(--texto-dim);
+    font-size: 0.9rem;
+}
