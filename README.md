@@ -1,7 +1,7 @@
 # Documentação do Projeto EduDjango
 
 ## Descrição do Projeto
-EduDjango é uma plataforma educacional desenvolvida com o framework Django. O principal objetivo do projeto é fornecer um ambiente de aprendizado interativo e acessível, permitindo que educadores e alunos se conectem e compartilhem conhecimento de forma eficaz.
+O EduDjango é uma plataforma educacional desenvolvida com o framework Django. O principal objetivo do projeto é fornecer um ambiente de aprendizado interativo e acessível, permitindo que educadores e alunos se conectem e compartilhem conhecimento de forma eficaz.
 
 ## Recursos
 - **Interface de usuário responsiva:** A plataforma é totalmente responsiva, garantindo uma experiência de usuário consistente em todos os dispositivos.
